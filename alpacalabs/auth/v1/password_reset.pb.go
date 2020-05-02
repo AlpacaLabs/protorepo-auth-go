@@ -110,7 +110,7 @@ var xxx_messageInfo_ResetPasswordResponse proto.InternalMessageInfo
 type PasswordResetCode struct {
 	// a randomly generated reset code
 	Code string `protobuf:"bytes,1,opt,name=code,proto3" json:"code,omitempty"`
-	// indicates whether a password reset code has been used. Used codes are necessarily unusable.
+	// indicates whether a code has been used. Once used, a code becomes stale.
 	Used bool `protobuf:"varint,2,opt,name=used,proto3" json:"used,omitempty"`
 	// if true, this password reset code cannot be used. When a user uses a reset code,
 	// all previously issued codes are rendered stale.
